@@ -1,32 +1,39 @@
-# Beam Up Pixel
+# Retro Beam
 
-A Wear OS watch face that recreates the classic "Beam Up" digital watch face with sci-fi teleportation beam animations when digits change.
+A feature-rich Wear OS watch face that combines classic sci-fi beam animations with modern health and fitness tracking in a beautiful retro aesthetic.
 
 ## Description
 
-Beam Up Pixel is a modern adaptation of the original [Beam Up watch face](https://github.com/C-D-Lewis/beam-up) created by [Chris Lewis](https://github.com/C-D-Lewis) for the [Pebble smartwatch](https://getpebble.com/). This implementation brings the iconic tractor beam animation effect to modern Wear OS devices with a minimalist retro vibe.
+Retro Beam is an evolved version inspired by the original [Beam Up watch face](https://github.com/C-D-Lewis/beam-up) created by [Chris Lewis](https://github.com/C-D-Lewis) for the [Pebble smartwatch](https://getpebble.com/). This implementation brings the iconic tractor beam animation effect to modern Wear OS devices while adding comprehensive health tracking and a refined retro design.
 
-The watch face displays the time in a bold digital format using the Imagine font. When digits change (at the end of each minute), white tractor beams animate upward from the bottom of the screen, "beaming up" the old digits and "beaming down" the new ones. This creates a unique sci-fi aesthetic that makes checking the time an engaging visual experience.
+The watch face displays time in a bold digital format using the classic Imagine font. When digits change, yellow tractor beams animate upward from the bottom of the screen, creating the signature sci-fi "beam up" effect. Beyond the original concept, Retro Beam integrates modern smartwatch features with a carefully crafted yellow and white color scheme.
 
-While inspired by the original, this implementation includes some updates for modern smartwatches:
-- **Progress bar**: Updates every second (instead of every 15 seconds) for compatibility with modern Wear OS power management
-- **Beam animation**: Features an updated visual style with enhanced timing and effects
+### Key Features
 
-### Features
-
-- **Digital Time Display**: Large, easy-to-read digits in 12-hour format
+- **Digital Time Display**: Large, easy-to-read yellow digits with beam animations
+- **Smart Health Tracking**: Real-time display of heart rate, step count, and battery level
+- **AM/PM Indicator**: Convenient 12/24-hour format support with visual indicator
+- **Live Seconds Counter**: Real-time seconds display and animated progress bar
+- **Day & Date Display**: Current day of week and date information
+- **Retro Color Scheme**: Beautiful yellow (#f5df1d) and white theme
 - **Beam Animation**: Four-phase animation sequence when digits change:
   - Phase 1: Beam extends upward to reach the old digit
   - Phase 2: Old digit fades out as it's "transported"
   - Phase 3: New digit fades in as it's "materialized"
   - Phase 4: Beam retracts back down
-- **Synchronized Effects**: All changing digits animate simultaneously for a cohesive effect
-- **Monospace Font**: Uses the classic Imagine font for authentic digital watch aesthetics
-- **Optimized Performance**: Hardware-accelerated rendering for smooth 60fps animations
+- **Optimized Layout**: Pixel-perfect positioning for round Wear OS displays
+- **Hardware Acceleration**: Smooth 60fps animations and rendering
+
+### Health & Fitness Integration
+
+- **Heart Rate Monitoring**: Displays current heart rate with ♥ symbol
+- **Step Counter**: Shows daily step count with 👟 symbol
+- **Battery Indicator**: Real-time battery percentage display
+- **Sensor Permissions**: Full integration with Wear OS health sensors
 
 ## Animated Preview
 
-![Beam Up Animation](screenshots/animation.gif)
+![Retro Beam Animation](screenshots/animation.gif)
 
 ## Building and Installation
 
@@ -40,13 +47,13 @@ While inspired by the original, this implementation includes some updates for mo
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/jeremymanning/beam-up-pixel.git
-   cd beam-up-pixel
+   git clone https://github.com/jeremymanning/retro-beam.git
+   cd retro-beam
    ```
 
 2. Navigate to the watch face project directory:
    ```bash
-   cd BeamUpWatchFace
+   cd RetroBeam
    ```
 
 3. Build the APK using Gradle:
@@ -85,28 +92,38 @@ While inspired by the original, this implementation includes some updates for mo
 
 1. Transfer the APK file to your watch
 2. Use a file manager app on the watch to install the APK
-3. Grant necessary permissions when prompted
+3. Grant necessary permissions when prompted (body sensors, activity recognition)
 
 ### Selecting the Watch Face
 
 1. Long press on your current watch face
 2. Swipe to browse available watch faces
-3. Select "Beam Up" from the list
-4. Enjoy your new sci-fi watch face!
+3. Select "Retro Beam" from the list
+4. Grant health sensor permissions if prompted
+5. Enjoy your new retro sci-fi watch face!
 
 ## Technical Details
 
 - **Platform**: Wear OS 3.0+ (API 30+)
 - **Implementation**: Built using the [Watch Face Format (WFF)](https://developer.android.com/training/wearables/wff) - Android's declarative XML format for watch faces
-- **Rendering**: Hardware-accelerated canvas
-- **Animation**: Time-based transforms with millisecond precision
-- **Font**: Imagine font (included)
+- **Rendering**: Hardware-accelerated canvas with optimized animations
+- **Sensor Integration**: Real-time health data via Wear OS sensor APIs
+- **Font**: Imagine font (included) for authentic retro aesthetics
+- **Permissions**: `BODY_SENSORS`, `ACTIVITY_RECOGNITION` for health data
+
+### Sensor Data Sources
+
+- **Battery**: `[BATTERY_PERCENT]` - Current battery level (0-100%)
+- **Heart Rate**: `[HEART_RATE]` - Current heart rate in BPM
+- **Step Count**: `[STEP_COUNT]` - Daily step counter
+- **Time Data**: Live seconds, AM/PM indicators, day/date information
 
 ## Credits
 
-- **Original Concept & Design**: [Chris Lewis](https://github.com/C-D-Lewis) - Creator of the original [Beam Up watch face](https://github.com/C-D-Lewis/beam-up) for Pebble
-- **Wear OS Implementation**: This repository
+- **Original Concept**: [Chris Lewis](https://github.com/C-D-Lewis) - Creator of the original [Beam Up watch face](https://github.com/C-D-Lewis/beam-up) for Pebble
+- **Retro Beam Implementation**: Enhanced with modern health tracking and refined design
 - **Font**: Imagine font by Nate Halley
+- **Development**: Built with extensive testing and optimization for Wear OS devices
 
 ## License
 

@@ -159,14 +159,14 @@
         <Variant mode="AMBIENT" target="alpha" value="0"/>
         <Text align="RIGHT">
           <Font family="@font/imagine_font" size="45" color="#ffffff">
-            <Template>%03d%%<Parameter expression="[BATTERY_PCT]"/></Template>
+            <Template>%03d%%<Parameter expression="[BATTERY_PERCENT]"/></Template>
           </Font>
         </Text>
       </PartText>
     </Group>
     
     <!-- Day text moved right and up with smaller font -->
-    <Group x="0" y="0" width="450" height="450" name="hello_world">
+    <Group x="0" y="0" width="450" height="450" name="day_of_week_and_month">
       <PartText x="243" y="214" width="240" height="50">
         <Variant mode="AMBIENT" target="alpha" value="0"/>
         <Text align="LEFT">
@@ -183,7 +183,7 @@
         <Variant mode="AMBIENT" target="alpha" value="0"/>
         <Text align="CENTER">
           <Font family="@font/imagine_font" size="45" color="#f5df1d">
-            <Template>%03d BPM<Parameter expression="[HEART_RATE_BPM]"/></Template>
+            <Template>%03d BPM<Parameter expression="[HEART_RATE]"/></Template>
           </Font>
         </Text>
       </PartText>

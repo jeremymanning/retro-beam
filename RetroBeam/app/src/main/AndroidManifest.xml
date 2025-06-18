@@ -1,0 +1,24 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-feature android:name="android.hardware.type.watch" />
+    
+    <!-- Permissions for watch face complications -->
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+
+    <!-- Note: hasCode is required to be false for Watch Face Format -->
+    <application
+        android:label="@string/watch_face_name"
+        android:hasCode="false">
+
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
+            
+        <property
+            android:name="com.google.wear.watchface.format.version"
+            android:value="1" />
+            
+    </application>
+
+</manifest>
